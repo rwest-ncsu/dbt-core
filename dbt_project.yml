@@ -34,4 +34,6 @@ models:
   dbt_core_demo:
     # Config indicated by + and applies to all files under models/example/
     example:
-      +materialized: view
+      +materialized: view #This behavior is overwritten in model 1
+      #The + symbol sets downstream behavior for subdirectories
+    materialized: table
